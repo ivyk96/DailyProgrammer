@@ -55,8 +55,9 @@
             this.turnLabel.AutoSize = true;
             this.turnLabel.Location = new System.Drawing.Point(67, 236);
             this.turnLabel.Name = "turnLabel";
-            this.turnLabel.Size = new System.Drawing.Size(0, 13);
+            this.turnLabel.Size = new System.Drawing.Size(51, 13);
             this.turnLabel.TabIndex = 1;
+            this.turnLabel.Text = "turnLabel";
             // 
             // A1
             // 
