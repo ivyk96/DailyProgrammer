@@ -199,4 +199,3 @@
         private System.Windows.Forms.Label winnerLabel;
     }
 }
-

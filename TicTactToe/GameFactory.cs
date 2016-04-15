@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace TicTactToe
 {
@@ -11,6 +6,13 @@ namespace TicTactToe
     {
         public int Turn = 0;
 
+        public string GetTurn()
+        {
+            if (Turn == 0)
+                return "X";
+            else
+                return "O";
+        }
         public Button PlayTurn(Button b)
         {
             if(Turn == 0)

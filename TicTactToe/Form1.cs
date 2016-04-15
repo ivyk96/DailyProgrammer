@@ -10,14 +10,15 @@ namespace TicTactToe
         public Form1()
         {
             InitializeComponent();
-            turnLabel.Text = "";
+            turnLabel.Text = "X";
             winnerLabel.Text = "";
         }
 
         private void Button_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            game.Turn(button);
+            game.PlayTurn(button);
+            turnLabel.Text = game.GetTurn();
             Check_Winner();
         }
 
