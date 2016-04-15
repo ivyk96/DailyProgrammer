@@ -4,30 +4,31 @@ namespace TicTactToe
 {
     public class GameFactory
     {
-        public int Turn = 0;
+        private int turn = 0;
 
         public string GetTurn()
         {
-            if (Turn == 0)
+            if (turn == 0)
                 return "X";
             else
                 return "O";
         }
-        public Button PlayTurn(Button b)
+
+        public string PlayTurn(Button b)
         {
-            if(Turn == 0)
+            if(turn == 0)
             {
                 b.Text = "X";
-                Turn++;
+                turn++;
             }
             else
             {
                 b.Text = "O";
-                Turn--;
+                turn--;
             }
 
             b.Enabled = false;
-            return b;
+            return GetTurn();
         }
     }
 }
