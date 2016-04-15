@@ -12,7 +12,7 @@ namespace TicTactToe
 {
     public partial class Form1 : Form
     {
-        private int turn = 0;
+        private GameFactory game = new GameFactory();
 
         public Form1()
         {
@@ -22,18 +22,7 @@ namespace TicTactToe
         private void Button_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            if(turn == 0)
-            {
-                button.Text = "X";
-                button.Enabled = false;
-                turn++;
-            }
-            else
-            {
-                button.Text = "O";
-                button.Enabled = false;
-                turn--;
-            }
+            game.Turn(button);            
         }
     }
 }
