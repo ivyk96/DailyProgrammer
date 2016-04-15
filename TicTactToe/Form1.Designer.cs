@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.playingLabel = new System.Windows.Forms.Label();
-            this.turnLabel = new System.Windows.Forms.Label();
             this.A1 = new System.Windows.Forms.Button();
             this.A2 = new System.Windows.Forms.Button();
             this.A3 = new System.Windows.Forms.Button();
@@ -39,6 +38,8 @@
             this.C1 = new System.Windows.Forms.Button();
             this.C2 = new System.Windows.Forms.Button();
             this.C3 = new System.Windows.Forms.Button();
+            this.turnLabel = new System.Windows.Forms.Label();
+            this.winnerLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // playingLabel
@@ -49,15 +50,6 @@
             this.playingLabel.Size = new System.Drawing.Size(47, 13);
             this.playingLabel.TabIndex = 0;
             this.playingLabel.Text = "Playing: ";
-            // 
-            // turnLabel
-            // 
-            this.turnLabel.AutoSize = true;
-            this.turnLabel.Location = new System.Drawing.Point(67, 236);
-            this.turnLabel.Name = "turnLabel";
-            this.turnLabel.Size = new System.Drawing.Size(51, 13);
-            this.turnLabel.TabIndex = 1;
-            this.turnLabel.Text = "turnLabel";
             // 
             // A1
             // 
@@ -149,11 +141,30 @@
             this.C3.UseVisualStyleBackColor = true;
             this.C3.Click += new System.EventHandler(this.Button_Click);
             // 
+            // turnLabel
+            // 
+            this.turnLabel.AutoSize = true;
+            this.turnLabel.Location = new System.Drawing.Point(67, 236);
+            this.turnLabel.Name = "turnLabel";
+            this.turnLabel.Size = new System.Drawing.Size(51, 13);
+            this.turnLabel.TabIndex = 1;
+            this.turnLabel.Text = "turnLabel";
+            // 
+            // winnerLabel
+            // 
+            this.winnerLabel.AutoSize = true;
+            this.winnerLabel.Location = new System.Drawing.Point(208, 236);
+            this.winnerLabel.Name = "winnerLabel";
+            this.winnerLabel.Size = new System.Drawing.Size(64, 13);
+            this.winnerLabel.TabIndex = 11;
+            this.winnerLabel.Text = "winnerLabel";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.winnerLabel);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
@@ -175,7 +186,6 @@
         #endregion
 
         private System.Windows.Forms.Label playingLabel;
-        private System.Windows.Forms.Label turnLabel;
         private System.Windows.Forms.Button A1;
         private System.Windows.Forms.Button A2;
         private System.Windows.Forms.Button A3;
@@ -185,6 +195,8 @@
         private System.Windows.Forms.Button C1;
         private System.Windows.Forms.Button C2;
         private System.Windows.Forms.Button C3;
+        private System.Windows.Forms.Label turnLabel;
+        private System.Windows.Forms.Label winnerLabel;
     }
 }
 
