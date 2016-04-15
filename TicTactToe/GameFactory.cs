@@ -9,19 +9,19 @@ namespace TicTactToe
 {
     public class GameFactory
     {
-        private int turn = 0;
+        public int Turn = 0;
 
-        public Button Turn(Button b)
+        public Button PlayTurn(Button b)
         {
-            if(turn == 0)
+            if(Turn == 0)
             {
                 b.Text = "X";
-                turn++;
+                Turn++;
             }
             else
             {
                 b.Text = "O";
-                turn--;
+                Turn--;
             }
 
             b.Enabled = false;
