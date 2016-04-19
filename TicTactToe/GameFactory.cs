@@ -36,80 +36,81 @@ namespace TicTactToe
         public string CheckWinner(IEnumerable<Button> buttonList)
         {
             List<Button> list = buttonList.ToList();
+            list.Reverse();
             string winner = "";
 
             //Horizontal checks
             // X
-            if (list[8].Text == "X" && list[7].Text == "X" && list[6].Text == "X")
+            if (list[0].Text == "X" && list[1].Text == "X" && list[2].Text == "X")
             {
                 winner = "X wins!";
             }
-            else if (list[5].Text == "X" && list[4].Text == "X" && list[3].Text == "X")
+            else if (list[3].Text == "X" && list[4].Text == "X" && list[5].Text == "X")
             {
                 winner = "X wins!";
             }
-            else if (list[2].Text == "X" && list[1].Text == "X" && list[0].Text == "X")
+            else if (list[6].Text == "X" && list[7].Text == "X" && list[8].Text == "X")
             {
                 winner = "X wins!";
             }
             // O
-            else if (list[8].Text == "O" && list[7].Text == "O" && list[6].Text == "O")
+            else if (list[0].Text == "O" && list[1].Text == "O" && list[2].Text == "O")
             {
                 winner = "O wins!";
             }
-            else if (list[5].Text == "O" && list[4].Text == "O" && list[3].Text == "O")
+            else if (list[3].Text == "O" && list[4].Text == "O" && list[5].Text == "O")
             {
                 winner = "O wins!";
             }
-            else if (list[2].Text == "O" && list[1].Text == "O" && list[0].Text == "O")
+            else if (list[6].Text == "O" && list[7].Text == "O" && list[8].Text == "O")
             {
                 winner = "O wins!";
             }
 
             //Vertical checks
             // X
-            if (list[8].Text == "X" && list[5].Text == "X" && list[2].Text == "X")
+            if (list[0].Text == "X" && list[3].Text == "X" && list[6].Text == "X")
             {
                 winner = "X wins!";
             }
-            else if (list[7].Text == "X" && list[4].Text == "X" && list[1].Text == "X")
+            else if (list[1].Text == "X" && list[4].Text == "X" && list[7].Text == "X")
             {
                 winner = "X wins!";
             }
-            else if (list[6].Text == "X" && list[3].Text == "X" && list[0].Text == "X")
+            else if (list[2].Text == "X" && list[5].Text == "X" && list[8].Text == "X")
             {
                 winner = "X wins!";
             }
             // O
-            else if (list[8].Text == "O" && list[5].Text == "O" && list[2].Text == "O")
+            else if (list[0].Text == "O" && list[3].Text == "O" && list[6].Text == "O")
             {
                 winner = "O wins!";
             }
-            else if (list[7].Text == "O" && list[4].Text == "O" && list[1].Text == "O")
+            else if (list[1].Text == "O" && list[4].Text == "O" && list[7].Text == "O")
             {
                 winner = "O wins!";
             }
-            else if (list[6].Text == "O" && list[3].Text == "O" && list[0].Text == "O")
+            else if (list[2].Text == "O" && list[5].Text == "O" && list[8].Text == "O")
             {
                 winner = "O wins!";
             }
 
             //Diagonal checks
             // X
-            if (list[8].Text == "X" && list[4].Text == "X" && list[0].Text == "X")
+            if (list[0].Text == "X" && list[4].Text == "X" && list[8].Text == "X")
             {
                 winner = "X wins!";
             }
-            else if (list[6].Text == "X" && list[4].Text == "X" && list[2].Text == "X")
+            else if (list[2].Text == "X" && list[4].Text == "X" && list[6].Text == "X")
             {
                 winner = "X wins!";
             }
             // O
-            else if (list[8].Text == "O" && list[4].Text == "O" && list[0].Text == "O")
+            else if (list[0].Text == "O" && list[4].Text == "O" && list[8].Text == "O")
             {
                 winner = "O wins!";
             }
-            else if (list[6].Text == "O" && list[4].Text == "O" && list[2].Text == "O")
+            else if (list[2].Text == "O" && list[4].Text == "O" && list[6].Text == "O")
             {
                 winner = "O wins!";
             }
