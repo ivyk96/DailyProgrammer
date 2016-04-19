@@ -19,6 +19,7 @@ namespace TicTactToe
 
         public Button Turn(IEnumerable<Button> buttonList)
         {
+            // Gets all buttons then choses a button that is not disabled, and returns it.
             List<Button> list = buttonList.ToList();
             list.RemoveAt(0);
             List<Button> tempList = new List<Button>();

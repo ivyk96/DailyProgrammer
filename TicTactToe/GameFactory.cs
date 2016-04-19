@@ -12,6 +12,7 @@ namespace TicTactToe
 
         public string GetTurn()
         {
+            // Returns whose turn it is.
             if (turn == 0)
                 return "X";
             else
@@ -20,12 +21,14 @@ namespace TicTactToe
 
         public string ResetTurn()
         {
+            // Resets the turn.
             turn = 0;
             return GetTurn();
         }
 
         public string PlayTurn(Button b)
         {
+            // Gives the turn to the other player, and populizes the button with the correct icon and then disables it.
             if(turn == 0)
             {
                 b.Text = "X";
@@ -43,6 +46,7 @@ namespace TicTactToe
 
         private void DisableButtons(List<Button> buttonList)
         {
+            // Disables the buttons in the list.
             foreach(Button b in buttonList)
             {
                 b.Enabled = false;
@@ -51,6 +55,7 @@ namespace TicTactToe
 
         private bool CheckTie(List<Button> buttonList)
         {
+            // Checks if there is still a button left that isn't disabled and returns result.
             bool isTie = true;
             
             foreach(Button b in buttonList)
@@ -67,6 +72,7 @@ namespace TicTactToe
 
         public string CheckWinner(IEnumerable<Button> buttonList)
         {
+            // TicTacToe logic and returns who won.
             List<Button> list = buttonList.ToList();
             list.RemoveAt(0);
             list.Reverse();
