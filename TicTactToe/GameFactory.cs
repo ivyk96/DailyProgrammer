@@ -16,6 +16,12 @@ namespace TicTactToe
                 return "O";
         }
 
+        public string ResetTurn()
+        {
+            turn = 0;
+            return GetTurn();
+        }
+
         public string PlayTurn(Button b)
         {
             if(turn == 0)
@@ -33,9 +39,18 @@ namespace TicTactToe
             return GetTurn();
         }
 
+        private void DisableButtons(List<Button> buttonList)
+        {
+            foreach(Button b in buttonList)
+            {
+                b.Enabled = false;
+            }
+        }
+
         public string CheckWinner(IEnumerable<Button> buttonList)
         {
             List<Button> list = buttonList.ToList();
+            list.RemoveAt(0);
             list.Reverse();
             string winner = "";
 
@@ -114,6 +129,9 @@ namespace TicTactToe
             {
                 winner = "O wins!";
             }
+
+            if (winner != string.Empty)
+                DisableButtons(list);
 
             return winner;
         }

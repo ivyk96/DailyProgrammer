@@ -40,6 +40,7 @@
             this.C3 = new System.Windows.Forms.Button();
             this.turnLabel = new System.Windows.Forms.Label();
             this.winnerLabel = new System.Windows.Forms.Label();
+            this.restartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // playingLabel
@@ -58,6 +59,7 @@
             this.A1.Name = "A1";
             this.A1.Size = new System.Drawing.Size(50, 50);
             this.A1.TabIndex = 2;
+            this.A1.Tag = "field";
             this.A1.UseVisualStyleBackColor = true;
             this.A1.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -68,6 +70,7 @@
             this.A2.Name = "A2";
             this.A2.Size = new System.Drawing.Size(50, 50);
             this.A2.TabIndex = 3;
+            this.A2.Tag = "field";
             this.A2.UseVisualStyleBackColor = true;
             this.A2.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -78,6 +81,7 @@
             this.A3.Name = "A3";
             this.A3.Size = new System.Drawing.Size(50, 50);
             this.A3.TabIndex = 4;
+            this.A3.Tag = "field";
             this.A3.UseVisualStyleBackColor = true;
             this.A3.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -88,6 +92,7 @@
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(50, 50);
             this.B1.TabIndex = 5;
+            this.B1.Tag = "field";
             this.B1.UseVisualStyleBackColor = true;
             this.B1.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -98,6 +103,7 @@
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(50, 50);
             this.B2.TabIndex = 6;
+            this.B2.Tag = "field";
             this.B2.UseVisualStyleBackColor = true;
             this.B2.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -108,6 +114,7 @@
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(50, 50);
             this.B3.TabIndex = 7;
+            this.B3.Tag = "field";
             this.B3.UseVisualStyleBackColor = true;
             this.B3.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -118,6 +125,7 @@
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(50, 50);
             this.C1.TabIndex = 8;
+            this.C1.Tag = "field";
             this.C1.UseVisualStyleBackColor = true;
             this.C1.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -128,6 +136,7 @@
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(50, 50);
             this.C2.TabIndex = 9;
+            this.C2.Tag = "field";
             this.C2.UseVisualStyleBackColor = true;
             this.C2.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -138,6 +147,7 @@
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(50, 50);
             this.C3.TabIndex = 10;
+            this.C3.Tag = "field";
             this.C3.UseVisualStyleBackColor = true;
             this.C3.Click += new System.EventHandler(this.Button_Click);
             // 
@@ -159,11 +169,22 @@
             this.winnerLabel.TabIndex = 11;
             this.winnerLabel.Text = "winnerLabel";
             // 
+            // restartButton
+            // 
+            this.restartButton.Location = new System.Drawing.Point(2, 2);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(75, 24);
+            this.restartButton.TabIndex = 12;
+            this.restartButton.Text = "Restart";
+            this.restartButton.UseVisualStyleBackColor = true;
+            this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.winnerLabel);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
@@ -197,5 +218,6 @@
         private System.Windows.Forms.Button C3;
         private System.Windows.Forms.Label turnLabel;
         private System.Windows.Forms.Label winnerLabel;
+        private System.Windows.Forms.Button restartButton;
     }
 }

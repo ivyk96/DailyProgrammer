@@ -21,5 +21,19 @@ namespace TicTactToe
             turnLabel.Text = game.PlayTurn((Button)sender);
             winnerLabel.Text = game.CheckWinner(this.Controls.OfType<Button>());
         }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            foreach(Button b in Controls.OfType<Button>())
+            {
+                if((string)b.Tag == "field")
+                {
+                    b.Enabled = true;
+                    b.Text = "";
+                }
+            }
+
+            turnLabel.Text = game.ResetTurn();
+        }
     }
 }
