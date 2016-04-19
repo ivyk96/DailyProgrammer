@@ -41,6 +41,10 @@
             this.turnLabel = new System.Windows.Forms.Label();
             this.winnerLabel = new System.Windows.Forms.Label();
             this.restartButton = new System.Windows.Forms.Button();
+            this.textXLabel = new System.Windows.Forms.Label();
+            this.textOLabel = new System.Windows.Forms.Label();
+            this.winXLabel = new System.Windows.Forms.Label();
+            this.winOLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // playingLabel
@@ -171,7 +175,7 @@
             // 
             // restartButton
             // 
-            this.restartButton.Location = new System.Drawing.Point(2, 2);
+            this.restartButton.Location = new System.Drawing.Point(12, 262);
             this.restartButton.Name = "restartButton";
             this.restartButton.Size = new System.Drawing.Size(75, 24);
             this.restartButton.TabIndex = 12;
@@ -179,11 +183,51 @@
             this.restartButton.UseVisualStyleBackColor = true;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
             // 
+            // textXLabel
+            // 
+            this.textXLabel.AutoSize = true;
+            this.textXLabel.Location = new System.Drawing.Point(208, 258);
+            this.textXLabel.Name = "textXLabel";
+            this.textXLabel.Size = new System.Drawing.Size(44, 13);
+            this.textXLabel.TabIndex = 13;
+            this.textXLabel.Text = "Wins X:";
+            // 
+            // textOLabel
+            // 
+            this.textOLabel.AutoSize = true;
+            this.textOLabel.Location = new System.Drawing.Point(208, 276);
+            this.textOLabel.Name = "textOLabel";
+            this.textOLabel.Size = new System.Drawing.Size(45, 13);
+            this.textOLabel.TabIndex = 14;
+            this.textOLabel.Text = "Wins O:";
+            // 
+            // winXLabel
+            // 
+            this.winXLabel.AutoSize = true;
+            this.winXLabel.Location = new System.Drawing.Point(258, 258);
+            this.winXLabel.Name = "winXLabel";
+            this.winXLabel.Size = new System.Drawing.Size(13, 13);
+            this.winXLabel.TabIndex = 15;
+            this.winXLabel.Text = "0";
+            // 
+            // winOLabel
+            // 
+            this.winOLabel.AutoSize = true;
+            this.winOLabel.Location = new System.Drawing.Point(258, 276);
+            this.winOLabel.Name = "winOLabel";
+            this.winOLabel.Size = new System.Drawing.Size(13, 13);
+            this.winOLabel.TabIndex = 16;
+            this.winOLabel.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 298);
+            this.Controls.Add(this.winOLabel);
+            this.Controls.Add(this.winXLabel);
+            this.Controls.Add(this.textOLabel);
+            this.Controls.Add(this.textXLabel);
             this.Controls.Add(this.restartButton);
             this.Controls.Add(this.winnerLabel);
             this.Controls.Add(this.C3);
@@ -219,5 +263,9 @@
         private System.Windows.Forms.Label turnLabel;
         private System.Windows.Forms.Label winnerLabel;
         private System.Windows.Forms.Button restartButton;
+        private System.Windows.Forms.Label textXLabel;
+        private System.Windows.Forms.Label textOLabel;
+        private System.Windows.Forms.Label winXLabel;
+        private System.Windows.Forms.Label winOLabel;
     }
 }
