@@ -7,8 +7,8 @@ namespace TicTactToe
     public class GameFactory
     {
         private int turn = 0;
-        private int xWins = 0;
-        private int oWins = 0;
+        public int XWins = 0;
+        public int OWins = 0;
 
         public string GetTurn()
         {
@@ -47,6 +47,22 @@ namespace TicTactToe
             {
                 b.Enabled = false;
             }
+        }
+
+        private bool CheckTie(List<Button> buttonList)
+        {
+            bool isTie = true;
+            
+            foreach(Button b in buttonList)
+            {
+                if(b.Enabled == true)
+                {
+                    isTie = false;
+                    break;
+                }
+            }
+
+            return isTie;
         }
 
         public string CheckWinner(IEnumerable<Button> buttonList)
@@ -100,10 +116,13 @@ namespace TicTactToe
             else if (list[2].Text == "O" && list[4].Text == "O" && list[6].Text == "O")
                 winner = "O wins!";
 
+            if (CheckTie(list))
+                winner = "Tie!";
+
             if (winner == "X wins!")
-                xWins++;
-            else
-                oWins++;
+                XWins++;
+            else if (winner == "O wins!")
+                OWins++;
 
             if (winner != string.Empty)
                 DisableButtons(list);

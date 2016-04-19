@@ -20,6 +20,8 @@ namespace TicTactToe
         {
             turnLabel.Text = game.PlayTurn((Button)sender);
             winnerLabel.Text = game.CheckWinner(this.Controls.OfType<Button>());
+            winXLabel.Text = game.XWins.ToString();
+            winOLabel.Text = game.OWins.ToString();
         }
 
         private void restartButton_Click(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace TicTactToe
             }
 
             turnLabel.Text = game.ResetTurn();
+            winnerLabel.Text = "";
         }
     }
 }
