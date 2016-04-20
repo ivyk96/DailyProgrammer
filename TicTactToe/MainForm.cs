@@ -20,14 +20,14 @@ namespace TicTactToe
         private void singleplayerButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form gameForm = new GameForm(false);
+            Form gameForm = new GameForm(false, this);
             gameForm.ShowDialog();
         }
 
         private void multiplayerButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form gameForm = new GameForm(true);
+            Form gameForm = new GameForm(true, this);
             gameForm.ShowDialog();
         }
     }

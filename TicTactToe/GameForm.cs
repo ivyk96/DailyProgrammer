@@ -7,12 +7,14 @@ namespace TicTactToe
 {
     public partial class GameForm : Form
     {
+        private MainForm main;
         private GameFactory game = new GameFactory();
         private AIFactory ai;
 
-        public GameForm(bool multiplayer)
+        public GameForm(bool multiplayer, MainForm main)
         {
             InitializeComponent();
+            this.main = main;
             Initialize(multiplayer);
         }
 
@@ -68,7 +70,13 @@ namespace TicTactToe
 
         private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+            main.Visible = true;
+        }
+
+        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            main.Visible = true;
+            this.Close();
         }
     }
 }
