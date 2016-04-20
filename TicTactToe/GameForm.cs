@@ -52,7 +52,7 @@ namespace TicTactToe
             winXLabel.Text = game.XWins.ToString();
             winOLabel.Text = game.OWins.ToString();
 
-            if (ai != null)
+            if (ai != null && winnerLabel.Text == "")
                 AI_Click();
         }
 
