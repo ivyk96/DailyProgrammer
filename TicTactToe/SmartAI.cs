@@ -60,9 +60,14 @@ namespace TicTactToe
                 {
                     count++;
                 }
-                else if(b.Text == "" && count == 2)
+            }
+
+            if(count == 2)
+            {
+                foreach(Button b in row.Values)
                 {
-                    return b;
+                    if (b.Text == "")
+                        return b;
                 }
             }
 
