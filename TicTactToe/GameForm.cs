@@ -9,16 +9,17 @@ namespace TicTactToe
         private GameFactory game = new GameFactory();
         private SmartAI ai;
 
-        public GameForm(bool multiplayer)
+        public GameForm(bool multiplayer, string title)
         {
             InitializeComponent();
-            Initialize(multiplayer);
+            Initialize(multiplayer, title);
         }
 
-        private void Initialize(bool multiplayer)
+        private void Initialize(bool multiplayer, string title)
         {
             if (!multiplayer)
                 ai = new SmartAI();
+            this.Text += title;
             turnLabel.Text = game.GetTurn();
             winnerLabel.Text = "";
 

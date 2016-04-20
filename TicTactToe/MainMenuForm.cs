@@ -11,6 +11,14 @@ namespace TicTactToe
             InitializeComponent();
         }
 
+        private void CloseChildForms()
+        {
+            foreach(Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -18,15 +26,19 @@ namespace TicTactToe
 
         private void vsAIMenuItem_Click(object sender, EventArgs e)
         {
-            GameForm game = new GameForm(false);
+            CloseChildForms();
+            GameForm game = new GameForm(false, " vs. AI");
             game.MdiParent = this;
+            game.StartPosition = FormStartPosition.CenterScreen;
             game.Show();
         }
 
         private void vsPlayeMenuItem_Click(object sender, EventArgs e)
         {
-            GameForm game = new GameForm(true);
+            CloseChildForms();
+            GameForm game = new GameForm(true, " vs. Player");
             game.MdiParent = this;
+            game.StartPosition = FormStartPosition.CenterScreen;
             game.Show();
         }
     }
