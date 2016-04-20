@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace TicTactToe
 {
-    public class AIFactory
+    public class RandomAI
     {
         private Random random = new Random();
 
-        public AIFactory()
+        public RandomAI()
         {
        
         }
