@@ -7,7 +7,7 @@ namespace TicTactToe
     public partial class GameForm : Form
     {
         private GameFactory game = new GameFactory();
-        private AIFactory ai;
+        private SmartAI ai;
 
         public GameForm(bool multiplayer)
         {
@@ -18,7 +18,7 @@ namespace TicTactToe
         private void Initialize(bool multiplayer)
         {
             if (!multiplayer)
-                ai = new AIFactory(game);
+                ai = new SmartAI();
             turnLabel.Text = game.GetTurn();
             winnerLabel.Text = "";
         }
