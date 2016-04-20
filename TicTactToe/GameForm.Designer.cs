@@ -1,6 +1,6 @@
 ﻿namespace TicTactToe
 {
-    partial class Form1
+    partial class GameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -219,7 +219,7 @@
             this.winOLabel.TabIndex = 16;
             this.winOLabel.Text = "0";
             // 
-            // Form1
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -241,8 +241,9 @@
             this.Controls.Add(this.A1);
             this.Controls.Add(this.turnLabel);
             this.Controls.Add(this.playingLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "GameForm";
+            this.Text = "Tic Tac Toe";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

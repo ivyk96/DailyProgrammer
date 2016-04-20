@@ -5,15 +5,21 @@ using System.Windows.Forms;
 
 namespace TicTactToe
 {
-    public partial class Form1 : Form
+    public partial class GameForm : Form
     {
         private GameFactory game = new GameFactory();
         private AIFactory ai;
 
-        public Form1()
+        public GameForm(bool multiplayer)
         {
             InitializeComponent();
-            ai = new AIFactory(game);
+            Initialize(multiplayer);
+        }
+
+        private void Initialize(bool multiplayer)
+        {
+            if (!multiplayer)
+                ai = new AIFactory(game);
             turnLabel.Text = game.GetTurn();
             winnerLabel.Text = "";
         }
@@ -39,7 +45,9 @@ namespace TicTactToe
             winnerLabel.Text = game.CheckWinner(this.Controls.OfType<Button>());
             winXLabel.Text = game.XWins.ToString();
             winOLabel.Text = game.OWins.ToString();
-            AI_Click();
+
+            if (ai != null)
+                AI_Click();
         }
 
         private void restartButton_Click(object sender, EventArgs e)
@@ -56,6 +64,11 @@ namespace TicTactToe
 
             turnLabel.Text = game.ResetTurn();
             winnerLabel.Text = "";
+        }
+
+        private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
