@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -24,6 +23,13 @@ namespace TicTactToe
                 ai = new AIFactory(game);
             turnLabel.Text = game.GetTurn();
             winnerLabel.Text = "";
+
+            game.Board = new State[3][];
+
+            for (int i = 0; i < 3; i++)
+            {
+                game.Board[i] = new State[3];
+            }
         }
 
         private void AI_Click()

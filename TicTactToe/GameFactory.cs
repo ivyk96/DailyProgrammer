@@ -9,6 +9,7 @@ namespace TicTactToe
         private int turn = 0;
         public int XWins = 0;
         public int OWins = 0;
+        public State[][] Board;
 
         public string GetTurn()
         {
@@ -29,7 +30,39 @@ namespace TicTactToe
         public string PlayTurn(Button b)
         {
             // Gives the turn to the other player, and populizes the button with the correct icon and then disables it.
-            if(turn == 0)
+
+            switch (b.Name)
+            {
+                case "A1":
+                    Board[0][0] = (State) turn + 1;
+                    break;
+                case "A2":
+                    Board[0][1] = (State) turn + 1;
+                    break;
+                case "A3":
+                    Board[0][2] = (State) turn + 1;
+                    break;
+                case "B1":
+                    Board[1][0] = (State) turn + 1;
+                    break;
+                case "B2":
+                    Board[1][1] = (State) turn + 1;
+                    break;
+                case "B3":
+                    Board[1][2] = (State) turn + 1;
+                    break;
+                case "C1":
+                    Board[2][0] = (State) turn + 1;
+                    break;
+                case "C2":
+                    Board[2][1] = (State) turn + 1;
+                    break;
+                case "C3":
+                    Board[2][2] = (State) turn + 1;
+                    break;
+            }
+
+            if (turn == 0)
             {
                 b.Text = "X";
                 turn++;
@@ -41,6 +74,7 @@ namespace TicTactToe
             }
 
             b.Enabled = false;
+            
             return GetTurn();
         }
 
@@ -50,6 +84,13 @@ namespace TicTactToe
             foreach(Button b in buttonList)
             {
                 b.Enabled = false;
+            }
+
+            game.Board = new State[3][];
+
+            for (int i = 0; i < 3; i++)
+            {
+                game.Board[i] = new State[3];
             }
         }
 
