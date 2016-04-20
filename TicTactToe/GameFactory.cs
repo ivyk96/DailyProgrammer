@@ -78,7 +78,7 @@ namespace TicTactToe
             list.Reverse();
             string winner = "";
 
-            //Horizontal checks
+            // Horizontal checks
             // X
             if (list[0].Text == "X" && list[1].Text == "X" && list[2].Text == "X")
                 winner = "X wins!";
