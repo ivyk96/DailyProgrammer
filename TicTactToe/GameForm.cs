@@ -6,21 +6,19 @@ namespace TicTactToe
 {
     public partial class GameForm : Form
     {
-        private MainForm main;
         private GameFactory game = new GameFactory();
-        private AIFactory ai;
+        private SmartAI ai;
 
-        public GameForm(bool multiplayer, MainForm main)
+        public GameForm(bool multiplayer)
         {
             InitializeComponent();
-            this.main = main;
             Initialize(multiplayer);
         }
 
         private void Initialize(bool multiplayer)
         {
             if (!multiplayer)
-                ai = new AIFactory(game);
+                ai = new SmartAI();
             turnLabel.Text = game.GetTurn();
             winnerLabel.Text = "";
 
@@ -72,17 +70,6 @@ namespace TicTactToe
 
             turnLabel.Text = game.ResetTurn();
             winnerLabel.Text = "";
-        }
-
-        private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            main.Visible = true;
-        }
-
-        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            main.Visible = true;
-            this.Close();
         }
     }
 }

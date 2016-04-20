@@ -8,18 +8,21 @@ namespace TicTactToe
     public class AIFactory
     {
         private Random random = new Random();
-        private GameFactory game;
 
-        public AIFactory(GameFactory game)
+        public AIFactory()
         {
-            this.game = game;       
+       
         }
 
         public Button Turn(IEnumerable<Button> buttonList)
         {
             // AI logic.
             List<Button> list = FilterList(buttonList);
-            return list[random.Next(0, list.Count)];
+
+            if (list != null)
+                return list[random.Next(0, list.Count)];
+            else
+                return null;
         }
 
         private List<Button> FilterList(IEnumerable<Button> buttonList)
