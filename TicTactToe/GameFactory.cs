@@ -86,11 +86,11 @@ namespace TicTactToe
                 b.Enabled = false;
             }
 
-            game.Board = new State[3][];
+            Board = new State[3][];
 
             for (int i = 0; i < 3; i++)
             {
-                game.Board[i] = new State[3];
+                Board[i] = new State[3];
             }
         }
 
