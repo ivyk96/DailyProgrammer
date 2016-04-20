@@ -9,7 +9,7 @@ namespace TicTactToe
 {
     public class SmartAI
     {
-        private AIFactory ai = new AIFactory();
+        private RandomAI ai = new RandomAI();
 
         public SmartAI()
         {
