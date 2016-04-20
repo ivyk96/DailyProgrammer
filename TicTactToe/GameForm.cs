@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,14 +6,12 @@ namespace TicTactToe
 {
     public partial class GameForm : Form
     {
-        private MainForm main;
         private GameFactory game = new GameFactory();
         private AIFactory ai;
 
-        public GameForm(bool multiplayer, MainForm main)
+        public GameForm(bool multiplayer)
         {
             InitializeComponent();
-            this.main = main;
             Initialize(multiplayer);
         }
 
@@ -66,17 +63,6 @@ namespace TicTactToe
 
             turnLabel.Text = game.ResetTurn();
             winnerLabel.Text = "";
-        }
-
-        private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            main.Visible = true;
-        }
-
-        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            main.Visible = true;
-            this.Close();
         }
     }
 }
