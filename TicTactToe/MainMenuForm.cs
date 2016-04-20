@@ -33,7 +33,7 @@ namespace TicTactToe
             game.Show();
         }
 
-        private void vsPlayeMenuItem_Click(object sender, EventArgs e)
+        private void vsPlayerMenuItem_Click(object sender, EventArgs e)
         {
             CloseChildForms();
             GameForm game = new GameForm(true, " vs. Player");
