@@ -19,9 +19,17 @@ namespace TicTactToe
 
         public Button Turn(IEnumerable<Button> buttonList)
         {
-            // Gets all buttons then choses a button that is not disabled, and returns it.
+            // AI logic.
+            List<Button> list = FilterList(buttonList);
+            return list[random.Next(0, list.Count)];
+        }
+
+        private List<Button> FilterList(IEnumerable<Button> buttonList)
+        {
+            //filters the list and returns a list of all available buttons.
             List<Button> list = buttonList.ToList();
             list.RemoveAt(0);
+            list.Reverse();
             List<Button> tempList = new List<Button>();
 
             foreach(Button b in list)
@@ -31,7 +39,7 @@ namespace TicTactToe
             }
 
             if (tempList.Count != 0)
-                return tempList[random.Next(0, tempList.Count)];
+                return tempList;
             else
                 return null;
         }
