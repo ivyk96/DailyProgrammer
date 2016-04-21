@@ -18,7 +18,7 @@ namespace TicTactToe
             Button b = GetSmartTurn(MakeRowList(MakeList(buttonList)));
 
             if (b == null)
-                b = ai.Turn(buttonList);
+                b = GetDumbTurn(buttonList);
 
             if (b != null)
                 return b;
@@ -47,12 +47,15 @@ namespace TicTactToe
             return null;
         }
 
-        private Button GetDumbTurn(List<Button> list)
+        private Button GetDumbTurn(IEnumerable<Button> buttonList)
         {
+            List<Button> list = MakeList(buttonList);
             Button b = null;
 
             if (list[4].Enabled == true)
                 b = list[4];
+            else
+                b = ai.Turn(buttonList);
 
             return b;
         }
