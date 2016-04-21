@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfThrees", "GameOfThrees\GameOfThrees.csproj", "{5E6455D4-6D49-4069-8CC9-410DCEAEF8C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monopoly", "Monopoly\Monopoly.csproj", "{083C18C7-5DC2-4CD3-919E-E6417FD6A160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5E6455D4-6D49-4069-8CC9-410DCEAEF8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E6455D4-6D49-4069-8CC9-410DCEAEF8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E6455D4-6D49-4069-8CC9-410DCEAEF8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{083C18C7-5DC2-4CD3-919E-E6417FD6A160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{083C18C7-5DC2-4CD3-919E-E6417FD6A160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{083C18C7-5DC2-4CD3-919E-E6417FD6A160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{083C18C7-5DC2-4CD3-919E-E6417FD6A160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
