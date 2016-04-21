@@ -45,6 +45,8 @@
             this.textOLabel = new System.Windows.Forms.Label();
             this.winXLabel = new System.Windows.Forms.Label();
             this.winOLabel = new System.Windows.Forms.Label();
+            this.textTieLabel = new System.Windows.Forms.Label();
+            this.tiesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // playingLabel
@@ -219,11 +221,31 @@
             this.winOLabel.TabIndex = 16;
             this.winOLabel.Text = "0";
             // 
+            // textTieLabel
+            // 
+            this.textTieLabel.AutoSize = true;
+            this.textTieLabel.Location = new System.Drawing.Point(208, 293);
+            this.textTieLabel.Name = "textTieLabel";
+            this.textTieLabel.Size = new System.Drawing.Size(30, 13);
+            this.textTieLabel.TabIndex = 17;
+            this.textTieLabel.Text = "Ties:";
+            // 
+            // tiesLabel
+            // 
+            this.tiesLabel.AutoSize = true;
+            this.tiesLabel.Location = new System.Drawing.Point(258, 293);
+            this.tiesLabel.Name = "tiesLabel";
+            this.tiesLabel.Size = new System.Drawing.Size(13, 13);
+            this.tiesLabel.TabIndex = 18;
+            this.tiesLabel.Text = "0";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 298);
+            this.ClientSize = new System.Drawing.Size(284, 315);
+            this.Controls.Add(this.tiesLabel);
+            this.Controls.Add(this.textTieLabel);
             this.Controls.Add(this.winOLabel);
             this.Controls.Add(this.winXLabel);
             this.Controls.Add(this.textOLabel);
@@ -267,5 +289,7 @@
         private System.Windows.Forms.Label textOLabel;
         private System.Windows.Forms.Label winXLabel;
         private System.Windows.Forms.Label winOLabel;
+        private System.Windows.Forms.Label textTieLabel;
+        private System.Windows.Forms.Label tiesLabel;
     }
 }

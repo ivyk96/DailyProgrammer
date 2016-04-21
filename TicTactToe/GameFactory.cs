@@ -9,6 +9,7 @@ namespace TicTactToe
         private int turn = 0;
         public int XWins = 0;
         public int OWins = 0;
+        public int ties = 0;
         public AIFactory ai;
 
         public GameFactory()
@@ -134,7 +135,11 @@ namespace TicTactToe
                 winner = "O wins!";
 
             if (CheckTie(list))
+            {
                 winner = "Tie!";
+                ties++;
+            }
+                
 
             if (winner == "X wins!")
                 XWins++;

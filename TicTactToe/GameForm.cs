@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -44,6 +43,7 @@ namespace TicTactToe
             winnerLabel.Text = game.CheckWinner(this.Controls.OfType<Button>());
             winXLabel.Text = game.XWins.ToString();
             winOLabel.Text = game.OWins.ToString();
+            tiesLabel.Text = game.ties.ToString();
 
             if (game.ai != null && winnerLabel.Text == "")
                 AI_Click();
