@@ -240,8 +240,9 @@
             // label40
             // 
             this.label40.AutoSize = true;
+            this.label40.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label40.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(55, 28);
+            this.label40.Location = new System.Drawing.Point(0, 33);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(91, 34);
             this.label40.TabIndex = 0;
@@ -423,7 +424,8 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(50, 5);
+            this.label30.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label30.Location = new System.Drawing.Point(0, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(96, 24);
             this.label30.TabIndex = 0;
@@ -595,8 +597,9 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Top;
             this.label20.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(1, 5);
+            this.label20.Location = new System.Drawing.Point(0, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(137, 24);
             this.label20.TabIndex = 0;
@@ -776,8 +779,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label10.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1, 34);
+            this.label10.Location = new System.Drawing.Point(0, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 26);
             this.label10.TabIndex = 0;
