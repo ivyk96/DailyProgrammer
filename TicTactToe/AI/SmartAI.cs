@@ -64,13 +64,13 @@ namespace TicTactToe
                     }
                 }
 
-                if(randomList.Count != 0)
+                if (randomList.Count != 0)
                     b = randomList[random.Next(0, randomList.Count)];
             }
 
             if (list[4].Enabled == true && b == null)
                 b = list[4];
-            else
+            else if(b == null)
                 b = ai.Turn(buttonList);
 
             return b;
