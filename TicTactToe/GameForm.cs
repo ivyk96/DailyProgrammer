@@ -20,13 +20,6 @@ namespace TicTactToe
             this.Text += title;
             turnLabel.Text = game.GetTurn();
             winnerLabel.Text = "";
-
-            game.Board = new State[3][];
-
-            for (int i = 0; i < 3; i++)
-            {
-                game.Board[i] = new State[3];
-            }
         }
 
         private void AI_Click()
@@ -50,6 +43,7 @@ namespace TicTactToe
             winnerLabel.Text = game.CheckWinner(this.Controls.OfType<Button>());
             winXLabel.Text = game.XWins.ToString();
             winOLabel.Text = game.OWins.ToString();
+            tiesLabel.Text = game.ties.ToString();
 
             if (game.ai != null && winnerLabel.Text == "")
                 AI_Click();
