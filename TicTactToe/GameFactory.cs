@@ -10,6 +10,17 @@ namespace TicTactToe
         public int XWins = 0;
         public int OWins = 0;
         public State[][] Board;
+        public AIFactory ai;
+
+        public GameFactory()
+        {
+
+        }
+
+        public GameFactory(AIFactory ai)
+        {
+            this.ai = ai;
+        }
 
         public string GetTurn()
         {

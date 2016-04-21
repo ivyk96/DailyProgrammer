@@ -6,19 +6,17 @@ namespace TicTactToe
 {
     public partial class GameForm : Form
     {
-        private GameFactory game = new GameFactory();
-        private SmartAI ai;
+        private GameFactory game;
 
-        public GameForm(bool multiplayer, string title)
+        public GameForm(GameFactory game, string title)
         {
             InitializeComponent();
-            Initialize(multiplayer, title);
+            Initialize(game, title);
         }
 
-        private void Initialize(bool multiplayer, string title)
+        private void Initialize(GameFactory game, string title)
         {
-            if (!multiplayer)
-                ai = new SmartAI();
+            this.game = game;
             this.Text += title;
             turnLabel.Text = game.GetTurn();
             winnerLabel.Text = "";
@@ -34,7 +32,7 @@ namespace TicTactToe
         private void AI_Click()
         {
             // RandomAI turn
-            Button b = ai.Turn(Controls.OfType<Button>());
+            Button b = game.ai.Turn(Controls.OfType<Button>());
 
             if (b != null)
             {
@@ -53,7 +51,7 @@ namespace TicTactToe
             winXLabel.Text = game.XWins.ToString();
             winOLabel.Text = game.OWins.ToString();
 
-            if (ai != null && winnerLabel.Text == "")
+            if (game.ai != null && winnerLabel.Text == "")
                 AI_Click();
         }
 

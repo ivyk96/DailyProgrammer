@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vsAIMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.easyAIMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mediumAIMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vsPlayerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -58,10 +60,26 @@
             // 
             // vsAIMenuItem
             // 
+            this.vsAIMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.easyAIMenuItem,
+            this.mediumAIMenuItem});
             this.vsAIMenuItem.Name = "vsAIMenuItem";
             this.vsAIMenuItem.Size = new System.Drawing.Size(152, 22);
             this.vsAIMenuItem.Text = "Vs. AI";
-            this.vsAIMenuItem.Click += new System.EventHandler(this.vsAIMenuItem_Click);
+            // 
+            // easyAIMenuItem
+            // 
+            this.easyAIMenuItem.Name = "easyAIMenuItem";
+            this.easyAIMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.easyAIMenuItem.Text = "Easy";
+            this.easyAIMenuItem.Click += new System.EventHandler(this.easyAIMenuItem_Click);
+            // 
+            // mediumAIMenuItem
+            // 
+            this.mediumAIMenuItem.Name = "mediumAIMenuItem";
+            this.mediumAIMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mediumAIMenuItem.Text = "Medium";
+            this.mediumAIMenuItem.Click += new System.EventHandler(this.mediumAIMenuItem_Click);
             // 
             // vsPlayerMenuItem
             // 
@@ -101,5 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem vsAIMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vsPlayerMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem easyAIMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mediumAIMenuItem;
     }
 }
