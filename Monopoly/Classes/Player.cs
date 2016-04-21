@@ -12,6 +12,7 @@ namespace Monopoly.Classes
         public int Cash;
         public int Turn;
         public int Position;
+        public List<Property> Properties = new List<Property>();
 
         public Player(string name)
         {
