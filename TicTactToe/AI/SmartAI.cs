@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,6 +8,7 @@ namespace TicTactToe
     public class SmartAI : AIFactory
     {
         private RandomAI ai = new RandomAI();
+        private Random random = new Random();
 
         public SmartAI()
         {
@@ -51,8 +53,22 @@ namespace TicTactToe
         {
             List<Button> list = MakeList(buttonList);
             Button b = null;
+            if (list[4].Text == "X")
+            {
+                List<Button> randomList = new List<Button>();
+                for(int i = 0; i < list.Count; i++)
+                {
+                    if(list[i].Enabled == true && i % 2 == 0 && i != 4)
+                    {
+                        randomList.Add(list[i]);
+                    }
+                }
 
-            if (list[4].Enabled == true)
+                if(randomList.Count != 0)
+                    b = randomList[random.Next(0, randomList.Count)];
+            }
+
+            if (list[4].Enabled == true && b == null)
                 b = list[4];
             else
                 b = ai.Turn(buttonList);
