@@ -50,6 +50,16 @@ namespace TicTactToe
             return null;
         }
 
+        private Button GetDumbTurn(List<Button> list)
+        {
+            Button b = null;
+
+            if (list[4].Enabled == true)
+                b = list[4];
+
+            return b;
+        }
+
         private Button RowCheck(Row row, string check)
         {
             int count = 0;
