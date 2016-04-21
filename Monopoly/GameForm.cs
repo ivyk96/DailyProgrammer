@@ -12,24 +12,45 @@ namespace Monopoly
 {
     public partial class GameForm : Form
     {
+        Random dice = new Random();
+        int secondsplayed;
+        int minutesplayed;
         public GameForm()
         {
             InitializeComponent();
         }
+        private void overviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if (GameStarted = false)
+            MessageBox.Show("No game started yet");
+        }
 
-        private void label40_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void roll_Click(object sender, EventArgs e)
         {
+            diceOutcomeLabel1.Text = dice.Next(1, 7).ToString();
+            diceOutcomeLabel2.Text = dice.Next(1, 7).ToString();
 
+            totalStepsLabel.Text = (int.Parse(diceOutcomeLabel1.Text) + int.Parse(diceOutcomeLabel2.Text)).ToString();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            secondsplayed++;          
+            if (secondsplayed % 60 == 0)
+            {
+                minutesplayed++;
+                secondsplayed = 0;
+            }
+            if (secondsplayed < 10)
+                playtimeLabel.Text = minutesplayed.ToString() + ":0" +  secondsplayed.ToString();
 
+            if (secondsplayed > 10)
+                playtimeLabel.Text = minutesplayed.ToString() + ":" + secondsplayed.ToString();
         }
     }
 }

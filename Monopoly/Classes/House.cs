@@ -8,9 +8,9 @@ namespace Monopoly.Classes
 {
     public class House
     {
-        public int price;
+        public int Price;
 
-        public House(int Price)
+        public House(int price)
         {
             Price = price;
         }
