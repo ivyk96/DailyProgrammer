@@ -16,5 +16,20 @@ namespace Monopoly
         {
             InitializeComponent();
         }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
