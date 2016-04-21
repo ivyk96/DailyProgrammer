@@ -9,6 +9,17 @@ namespace TicTactToe
         private int turn = 0;
         public int XWins = 0;
         public int OWins = 0;
+        public AIFactory ai;
+
+        public GameFactory()
+        {
+
+        }
+
+        public GameFactory(AIFactory ai)
+        {
+            this.ai = ai;
+        }
 
         public string GetTurn()
         {

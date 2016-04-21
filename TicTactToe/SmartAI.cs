@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace TicTactToe
 {
-    public class SmartAI
+    public class SmartAI : AIFactory
     {
-        private AIFactory ai = new AIFactory();
+        private RandomAI ai = new RandomAI();
 
         public SmartAI()
         {

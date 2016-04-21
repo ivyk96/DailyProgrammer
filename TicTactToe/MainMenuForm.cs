@@ -11,22 +11,43 @@ namespace TicTactToe
             InitializeComponent();
         }
 
+        private void CloseChildForms()
+        {
+            foreach(Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void vsAIMenuItem_Click(object sender, EventArgs e)
+        private void vsPlayerMenuItem_Click(object sender, EventArgs e)
         {
-            GameForm game = new GameForm(false);
+            CloseChildForms();
+            GameForm game = new GameForm(new GameFactory(), " vs. Player");
             game.MdiParent = this;
+            game.StartPosition = FormStartPosition.CenterScreen;
             game.Show();
         }
 
-        private void vsPlayeMenuItem_Click(object sender, EventArgs e)
+        private void easyAIMenuItem_Click(object sender, EventArgs e)
         {
-            GameForm game = new GameForm(true);
+            CloseChildForms();
+            GameForm game = new GameForm(new GameFactory(new RandomAI()), " vs. Easy AI");
             game.MdiParent = this;
+            game.StartPosition = FormStartPosition.CenterScreen;
+            game.Show();
+        }
+
+        private void mediumAIMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseChildForms();
+            GameForm game = new GameForm(new GameFactory(new SmartAI()), " vs. Medium AI");
+            game.MdiParent = this;
+            game.StartPosition = FormStartPosition.CenterScreen;
             game.Show();
         }
     }
