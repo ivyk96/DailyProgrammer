@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace TicTactToe
 {
-    public class RandomAI
+    public class RandomAI : AIFactory
     {
         private Random random = new Random();
 
