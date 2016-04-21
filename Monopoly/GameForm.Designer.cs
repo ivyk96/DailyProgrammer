@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
+            this.panel0 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
             this.label39 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
@@ -112,7 +111,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
-            this.panel40.SuspendLayout();
             this.panel39.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel37.SuspendLayout();
@@ -169,7 +167,7 @@
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.38462F));
-            this.tableLayoutPanel.Controls.Add(this.panel40, 10, 10);
+            this.tableLayoutPanel.Controls.Add(this.panel0, 10, 10);
             this.tableLayoutPanel.Controls.Add(this.panel39, 10, 9);
             this.tableLayoutPanel.Controls.Add(this.panel38, 10, 8);
             this.tableLayoutPanel.Controls.Add(this.panel37, 10, 7);
@@ -228,26 +226,14 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(998, 511);
             this.tableLayoutPanel.TabIndex = 0;
             // 
-            // panel40
+            // panel0
             // 
-            this.panel40.Controls.Add(this.label40);
-            this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel40.Location = new System.Drawing.Point(840, 440);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(154, 67);
-            this.panel40.TabIndex = 3;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label40.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(0, 33);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(91, 34);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "START";
-            this.label40.Click += new System.EventHandler(this.label40_Click);
+            this.panel0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel0.BackgroundImage")));
+            this.panel0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel0.Location = new System.Drawing.Point(840, 440);
+            this.panel0.Name = "panel0";
+            this.panel0.Size = new System.Drawing.Size(154, 67);
+            this.panel0.TabIndex = 3;
             // 
             // panel39
             // 
@@ -333,11 +319,13 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(133, 12);
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Green;
+            this.label35.Location = new System.Drawing.Point(1, 9);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(13, 13);
+            this.label35.Size = new System.Drawing.Size(122, 24);
             this.label35.TabIndex = 0;
-            this.label35.Text = "1";
+            this.label35.Text = "GREEN ORB";
             // 
             // panel34
             // 
@@ -510,11 +498,13 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 5);
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label25.Location = new System.Drawing.Point(1, 26);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(13, 13);
+            this.label25.Size = new System.Drawing.Size(68, 12);
             this.label25.TabIndex = 0;
-            this.label25.Text = "1";
+            this.label25.Text = "ORANGE ORB";
             // 
             // panel24
             // 
@@ -587,6 +577,7 @@
             // 
             // panel20
             // 
+            this.panel20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel20.BackgroundImage")));
             this.panel20.Controls.Add(this.label20);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(4, 4);
@@ -689,11 +680,13 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 12);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label15.Location = new System.Drawing.Point(3, 9);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.Size = new System.Drawing.Size(103, 24);
             this.label15.TabIndex = 0;
-            this.label15.Text = "1";
+            this.label15.Text = "BLUE ORB";
             // 
             // panel14
             // 
@@ -872,7 +865,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 10);
+            this.label5.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label5.Location = new System.Drawing.Point(2, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 12);
             this.label5.TabIndex = 0;
@@ -974,8 +968,6 @@
             this.Name = "GameForm";
             this.Text = "Monopoly";
             this.tableLayoutPanel.ResumeLayout(false);
-            this.panel40.ResumeLayout(false);
-            this.panel40.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
             this.panel38.ResumeLayout(false);
@@ -1062,8 +1054,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Panel middlePanel;
-        private System.Windows.Forms.Panel panel40;
-        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Panel panel0;
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Panel panel38;
