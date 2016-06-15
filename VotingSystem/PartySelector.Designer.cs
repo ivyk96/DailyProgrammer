@@ -1,6 +1,6 @@
 ﻿namespace VotingSystem
 {
-    partial class Form1
+    partial class PartySelector
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.voteBox = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // voteBox
+            // 
+            this.voteBox.FormattingEnabled = true;
+            this.voteBox.Location = new System.Drawing.Point(13, 13);
+            this.voteBox.Name = "voteBox";
+            this.voteBox.Size = new System.Drawing.Size(259, 21);
+            this.voteBox.TabIndex = 0;
+            this.voteBox.SelectedIndexChanged += new System.EventHandler(this.voteBox_SelectedIndexChanged);
+            // 
+            // PartySelector
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.voteBox);
+            this.Name = "PartySelector";
+            this.Text = "PartySelector";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox voteBox;
     }
 }
-

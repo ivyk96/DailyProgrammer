@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace VotingSystem
 {
-    public partial class Form1 : Form
+    public partial class VotingSystem : Form
     {
-        public Form1()
+        public VotingSystem()
         {
             InitializeComponent();
+        }
+
+        private void verificationButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            PartySelector PartyForm = new PartySelector();
+            PartyForm.ShowDialog();
         }
     }
 }
